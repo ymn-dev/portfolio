@@ -1,9 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
-  theme: {
-    extend: {},
-  },
+  content: ["./index.html", "./src/**/*.{html,js,ts,jsx,tsx}"],
+  theme: {},
   plugins: [require("daisyui")],
   daisyui: {
     themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
