@@ -1,7 +1,11 @@
 import React from "react";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="flex justify-center items-center">
+      <span className=" text-2xl opacity-70">&copy; ymn-dev</span>
+    </footer>
+  );
 };
 
 export default Footer;
