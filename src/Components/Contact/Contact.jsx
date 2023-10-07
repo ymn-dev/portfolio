@@ -1,20 +1,20 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import EmailForm from "./EmailForm";
+import MessageForm from "./MessageForm.jsx";
 
 const Contact = () => {
   return (
     <>
       <Navbar />
       <div className="bg-white  flex flex-col justify-center items-center py-10">
-        <h1 className="">Contact me now</h1>
-        <h2 className="">Let's see what needs to be done</h2>
+        <h1 className="text-black text-4xl font-bold">Contact me now</h1>
+        <h2 className="text-black italic text-xl my-4">Let's see what needs to be done</h2>
       </div>
       <div className="bg-black  flex flex-col justify-center items-center py-10">
-        <h2 className="">You can find me here</h2>
+        <h2 className="text-white text-2xl">You can find me here</h2>
         <br />
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-3">
           <a href="https://www.linkedin.com/in/sornniyoma/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="3em" height="3em" viewBox="0 0 24 24" className="hover:scale-150 duration-150">
               <path
@@ -31,9 +31,9 @@ const Contact = () => {
           </a>
         </div>
         <br />
-        <h2 className="">Just send me a DM</h2>
+        <h2 className="text-white text-2xl">Just send me a DM</h2>
       </div>
-      <EmailForm />
+      <MessageForm />
       <Footer />
     </>
   );

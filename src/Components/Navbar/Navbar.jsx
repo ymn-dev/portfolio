@@ -2,18 +2,18 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex bg-white justify-between item-center p-6 sticky top-0 shadow-transparent shadow-lg ">
-      <div className="text-2xl font-bold opacity-70 text-black">
-        <a href="#">Sornniyom.A</a>
+    <nav className="flex bg-white justify-between item-center py-6 px-12 sticky top-0 shadow-stone-400 shadow-lg z-[100] ">
+      <div className="text-2xl font-bold opacity-70 hover:transition-all hover:scale-125  text-black hover:text-opacity-70 duration-250 ">
+        <a href="/">Sornniyom.A</a>
       </div>
-      <ul className="flex gap-8 items-center">
-        <li className="font-bold hover:transition-all hover:text-lg  text-black hover:text-opacity-70 duration-250 ">
+      <ul className="flex gap-10 items-center">
+        <li className="font-bold hover:transition-all hover:scale-150  text-black hover:text-opacity-70 duration-250 ">
           <a href="/">HOME</a>
         </li>
-        <li className="font-bold hover:transition-all hover:text-lg text-black hover:text-opacity-70 duration-250 ">
+        {/* <li className="font-bold hover:transition-all hover:text-lg text-black hover:text-opacity-70 duration-250 ">
           <a href="#">PROJECTS</a>
-        </li>
-        <li className="font-bold  hover:transition-all  hover:text-lg text-black hover:text-opacity-70 duration-250 ">
+        </li> */}
+        <li className="font-bold  hover:transition-all  hover:scale-150 text-black hover:text-opacity-70 duration-250 ">
           {/* <a href="#">CONTACT</a> */}
 
           <a href="/contact">CONTACT</a>
