@@ -1,20 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between item-center p-6 sticky top-0 shadow-transparent shadow-lg ">
-      <div className="text-2xl font-bold opacity-70 text-red-700">
-        <a href="#hero">Sornniyom.A</a>
+    <nav className="flex bg-white justify-between item-center p-6 sticky top-0 shadow-transparent shadow-lg ">
+      <div className="text-2xl font-bold opacity-70 text-black">
+        <a href="#">Sornniyom.A</a>
       </div>
-      <ul className="flex gap-4 items-center">
-        <li className="font-bold opacity-70 hover:transition-all  hover:text-orange-700 hover:border-b-gray-400 border-2 duration-500 ">
-          <a href="#hero">HOME</a>
+      <ul className="flex gap-8 items-center">
+        <li className="font-bold hover:transition-all hover:text-lg  text-black hover:text-opacity-70 duration-250 ">
+          <Link to="/">HOME</Link>
         </li>
-        <li className="font-bold opacity-70 hover:transition-all  hover:text-orange-700 hover:border-b-gray-400 border-2 duration-500 ">
+        <li className="font-bold hover:transition-all hover:text-lg text-black hover:text-opacity-70 duration-250 ">
           <a href="#">PROJECTS</a>
         </li>
-        <li className="font-bold opacity-70 hover:transition-all  hover:text-orange-700 hover:border-b-gray-400 border-2 duration-500 ">
-          <a href="#">CONTACT</a>
+        <li className="font-bold  hover:transition-all  hover:text-lg text-black hover:text-opacity-70 duration-250 ">
+          {/* <a href="#">CONTACT</a> */}
+
+          <Link to="/contact">CONTACT</Link>
         </li>
       </ul>
     </nav>
