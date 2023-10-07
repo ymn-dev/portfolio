@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import EmailForm from "./EmailForm";
 
 const Contact = () => {
   return (
@@ -17,7 +18,7 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/sornniyoma/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="3em" height="3em" viewBox="0 0 24 24" className="hover:scale-150 duration-150">
               <path
-                className=" fill-white"
+                className="fill-white"
                 d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"></path>
             </svg>
           </a>
@@ -32,21 +33,7 @@ const Contact = () => {
         <br />
         <h2 className="">Just send me a DM</h2>
       </div>
-      <div className="bg-white flex flex-col justify-center items-center py-10">
-        <h2 className=" text-black ">OR send me an email</h2>
-        <br />
-        <form action="" className="flex flex-col">
-          <input type="text" id="name" name="name" className="" required />
-          <br />
-          <input type="email" id="email" name="email" className="" required />
-          <br />
-          <textarea id="message" name="message" className="" required></textarea>
-          <br />
-          <button type="submit" className=" text-right btn ml-auto">
-            Send Email
-          </button>
-        </form>
-      </div>
+      <EmailForm />
       <Footer />
     </>
   );
