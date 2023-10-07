@@ -9,9 +9,9 @@ const Contact = () => {
       <Navbar />
       <div className="bg-white  flex flex-col justify-center items-center py-10">
         <h1 className="text-black text-4xl font-bold">Contact me now</h1>
-        <h2 className="text-black italic text-xl my-4">Let's see what needs to be done</h2>
+        <h2 className="text-black italic text-xl my-4 font-semibold">Let's see what needs to be done</h2>
       </div>
-      <div className="bg-black  flex flex-col justify-center items-center py-10">
+      <div className="bg-black  flex flex-col justify-center items-center py-10 font-semibold">
         <h2 className="text-white text-2xl">You can find me here</h2>
         <br />
         <div className="flex justify-between gap-3">

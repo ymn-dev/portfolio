@@ -7,7 +7,7 @@ const MessageForm = () => {
     message: "",
   });
   return (
-    <div className="bg-white flex flex-col justify-center items-center py-10">
+    <div className="bg-white flex flex-col justify-center items-center py-10 font-semibold">
       <h2 className=" text-black text-2xl">OR leave me a message</h2>
       <br />
       <form action="" className="flex flex-col w-96 text-black text-lg">

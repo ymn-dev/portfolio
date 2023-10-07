@@ -5,7 +5,7 @@ const Skill = (props) => {
   return (
     <div className="flex flex-col justify-center items-center bg-white p-10">
       <h1 className="text-black text-4xl font-bold">SKILLS</h1>
-      <div className="flex p-8 flex-wrap justify-around gap-4 my-auto">
+      <div className="flex p-8 flex-wrap justify-center gap-4 my-auto">
         <SkillItem Path="mongodb.svg" Link="https://www.mongodb.com/" Alt="MongoDB" />
         <SkillItem Path="express-light.svg" Link="https://expressjs.com/" Alt="ExpressJS" />
         <SkillItem Path="react.svg" Link="https://react.dev" Alt="react" />

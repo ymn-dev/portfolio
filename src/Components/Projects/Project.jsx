@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 const Project = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-white p-10">
+    <div className="flex flex-col justify-center items-center bg-white py-10 px-16 ">
       <h1 className="text-black font-bold text-4xl">PROJECTS</h1>
       <div className="flex flex-col items-center justify-center p-10 gap-10">
         <Card
@@ -15,7 +15,13 @@ const Project = () => {
           Picture="colmaracademy.png"
           Name="Colmar Academy"
           Link="https://colmar-academy-assessment.vercel.app/"
-          Description="Responsive design practice with an academy's front page! Another project from Codeacademy that's done with only vanilla HTML/CSS"
+          Description="Responsive design practice with an academy's front page! Another project from Codeacademy that's done with only vanilla HTML/CSS. Designed according to specification and adding hover effect in many places to make it looks more interactive"
+        />
+        <Card
+          Picture="theteacozy.png"
+          Name="The Tea Cozy"
+          Link="https://ymn-tea-cozy.vercel.app/"
+          Description="One of my earliest off platform project from Codeacademy writing with vanilla HTML/CSS, a good looking coffee shop webpage with no responsive design, done according to specifications."
         />
         <Card
           Picture="adminpanel.png"
