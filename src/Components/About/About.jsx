@@ -10,7 +10,7 @@ const About = () => {
           functional code for both frontend and backend.
         </span>
         <br className="" />
-        <span>I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</span>
+        <span>I'm open to job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experiences then don't hesitate to contact me.</span>
       </p>
     </div>
   );

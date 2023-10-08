@@ -6,11 +6,14 @@ const MessageForm = () => {
     email: "",
     message: "",
   });
+  const handleSubmit = (ev) => {
+    alert("Thank you for your interest but this one is still in development, please try other means to contact me");
+  };
   return (
     <div className="bg-white flex flex-col justify-center items-center py-10 font-semibold">
       <h2 className=" text-black text-2xl">OR leave me a message</h2>
       <br />
-      <form action="" className="flex flex-col w-96 text-black text-lg">
+      <form onSubmit={handleSubmit} className="flex flex-col w-96 text-black text-lg">
         <input
           type="text"
           name="name"
