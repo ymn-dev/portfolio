@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-center xl:gap-16 gap-8  w-full 2xl:px-48 px-24 even:bg-gray-300">
+    <div className="flex lg:flex-row flex-col items-center justify-center xl:gap-16 gap-8  w-full 2xl:px-48 px-24 even:bg-stone-300 even:bg-opacity-75">
       <div className="lg:w-3/5 w-full mx-auto p-5" id="leftContainer">
         <img src={props.Picture} alt="" className=" w-full h-auto shadow-stone-500 shadow-lg hover:scale-105 duration-150 rounded-md" />
       </div>
