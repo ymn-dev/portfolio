@@ -2,8 +2,8 @@ import React from "react";
 import Card from "./Card";
 const Project = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-white">
-      <h1 className="text-black font-bold text-4xl py-14">PROJECTS</h1>
+    <div className="flex flex-col justify-center items-center bg-white py-10">
+      <h1 className="text-black font-bold text-4xl mb-8">PROJECTS</h1>
       <div className="flex flex-col items-center justify-center gap-10">
         <Card
           Picture="findyourhat.png"
