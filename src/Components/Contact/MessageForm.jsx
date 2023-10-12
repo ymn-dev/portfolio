@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 const MessageForm = () => {
   const [form, setForm] = useState({
@@ -6,8 +8,32 @@ const MessageForm = () => {
     email: "",
     message: "",
   });
-  const handleSubmit = (ev) => {
-    alert("Thank you for your interest but this one is still in development, please try other means to contact me");
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+    // alert("Thank you for your interest but this one is still in development, please try other means to contact me");
+    if (!form.name || !form.email || !form.message) return;
+    const data = {
+      service_id: "service_coq15t5",
+      template_id: "template_quz0o55",
+      user_id: "7Gd5lfircCBmJnGvQ",
+      template_params: {
+        from_name: form.name,
+        from_email: form.email,
+        to_name: "Auckawit Sornniyom",
+        message: form.message,
+      },
+    };
+    const response = await axios.post(`https://api.emailjs.com/api/v1.0/email/send`, data);
+    if (response.status === 200) {
+      alert("Email was successfully sent!");
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      alert("Some error has occured");
+    }
   };
   return (
     <div className="bg-white flex flex-col justify-center items-center py-10 font-semibold">
@@ -16,7 +42,7 @@ const MessageForm = () => {
       <form onSubmit={handleSubmit} className="flex flex-col w-96 text-black text-lg">
         <input
           type="text"
-          name="name"
+          name="user_name"
           className="bg-transparent border-b-2 border-gray-300"
           placeholder="Name"
           required
@@ -27,7 +53,7 @@ const MessageForm = () => {
         <br />
         <input
           type="email"
-          name="email"
+          name="user_email"
           className="bg-transparent border-b-2 border-gray-300"
           placeholder="Email"
           required
