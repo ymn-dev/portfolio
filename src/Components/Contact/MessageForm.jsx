@@ -8,9 +8,9 @@ const MessageForm = () => {
     email: "",
     message: "",
   });
+  const [loader, setLoader] = useState(false);
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    // alert("Thank you for your interest but this one is still in development, please try other means to contact me");
     if (!form.name || !form.email || !form.message) return;
     const data = {
       service_id: "service_coq15t5",
@@ -23,7 +23,9 @@ const MessageForm = () => {
         message: form.message,
       },
     };
+    setLoader(true);
     const response = await axios.post(`https://api.emailjs.com/api/v1.0/email/send`, data);
+    setLoader(false);
     if (response.status === 200) {
       alert("Email was successfully sent!");
       setForm({
@@ -36,7 +38,22 @@ const MessageForm = () => {
     }
   };
   return (
-    <div className="bg-white flex flex-col justify-center items-center py-10 font-semibold">
+    <div className="bg-white flex flex-col justify-center items-center py-10 font-semibold relative">
+      {loader && (
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16">
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none" class="hds-flight-icon--animation-loading" className="animate-spin">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              {" "}
+              <g fill="#000000" fill-rule="evenodd" clip-rule="evenodd">
+                {" "}
+                <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z" opacity=".2"></path> <path d="M7.25.75A.75.75 0 018 0a8 8 0 018 8 .75.75 0 01-1.5 0A6.5 6.5 0 008 1.5a.75.75 0 01-.75-.75z"></path>{" "}
+              </g>{" "}
+            </g>
+          </svg>
+        </div>
+      )}
       <h2 className=" text-black text-2xl">OR leave me a message</h2>
       <br />
       <form onSubmit={handleSubmit} className="flex flex-col w-96 text-black text-lg">
@@ -45,6 +62,7 @@ const MessageForm = () => {
           name="user_name"
           className="bg-transparent border-b-2 border-gray-300"
           placeholder="Name"
+          value={form.name}
           required
           onChange={(ev) => {
             setForm({ ...form, name: ev.target.value });
@@ -57,6 +75,7 @@ const MessageForm = () => {
           className="bg-transparent border-b-2 border-gray-300"
           placeholder="Email"
           required
+          value={form.email}
           onChange={(ev) => {
             setForm({ ...form, email: ev.target.value });
           }}
@@ -71,6 +90,7 @@ const MessageForm = () => {
           className="bg-transparent border-2 border-gray-300 h-[20rem]"
           placeholder="Message"
           required
+          value={form.message}
           onChange={(ev) => {
             setForm({ ...form, message: ev.target.value });
           }}></textarea>
