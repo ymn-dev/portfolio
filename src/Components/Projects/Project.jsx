@@ -21,7 +21,7 @@ const Project = () => {
           Name="Find Your Hat"
           Link="https://replit.com/@ymn-dev/05-find-your-hat"
           Description="A console game! now with my own spin, this game will ask you for the field size you want to play and the difficulty, then you can enjoy the gameplay loop where you can keep tracking your win record in the map size in that difficulty"
-          Tools={["javascript.svg", "node-js.svg"]}
+          Tools={["node-js.svg"]}
         />
         <Card
           Picture="colmaracademy.png"
