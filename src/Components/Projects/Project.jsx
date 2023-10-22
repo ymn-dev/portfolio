@@ -7,12 +7,14 @@ const Project = () => {
       <h1 className="text-black font-bold text-4xl mb-8">PROJECTS</h1>
       <div className="flex flex-col items-center justify-center gap-10">
         <Card
-          Picture="placeholder.png"
+          Picture="benom.png"
           Name="Benom Health Web Application"
           Link="https://benom-health-webapp-frontend.vercel.app/"
           Description="Exercise tracking web application built with MERN
           stack tailored for office workers to log their
           healthy activities, deployed on Vercel and Render.
+          In this web application you can add your exercise logs and let it calculate the calories you burned then make a graph from your recent exercises to track progress.
+          Required the user to login to keep the records or you can try calculate calories as a guest! (Render may take up to 1 minute to go online after 15 minutes of inactivity) 
           "
           Tools={["mongodb.svg", "express-light.svg", "react.svg", "node-js.svg", "tailwind.svg"]}
         />
