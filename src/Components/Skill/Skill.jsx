@@ -13,6 +13,7 @@ const Skill = (props) => {
         <SkillItem Path="html5.svg" Link="#" Alt="HTML5" />
         <SkillItem Path="css3.svg" Link="#" Alt="CSS3" />
         <SkillItem Path="javascript.svg" Link="#" Alt="Javascript" />
+        <SkillItem Path="typescript.svg" Link="https://www.typescriptlang.org/" Alt="Typescript" />
         <SkillItem Path="sqlite.svg" Link="https://www.sqlite.org/index.html" Alt="SQLite" />
         {/* <SkillItem Path=".svg" Link="" Alt="" />
         <SkillItem Path=".svg" Link="" Alt="" /> */}
